@@ -140,7 +140,11 @@ do {                                                    \
 #define OCP_ATTEMPT 20
 #define HS_DETECT_PLUG_TIME_MS (3 * 1000)
 #define SPECIAL_HS_DETECT_TIME_MS (2 * 1000)
+#if defined(CONFIG_MACH_XIAOMI_SAKURA) || defined(CONFIG_MACH_XIAOMI_TIFFANY) || defined(CONFIG_MACH_XIAOMI_VINCE) || defined(CONFIG_MACH_XIAOMI_YSL)
+#define MBHC_BUTTON_PRESS_THRESHOLD_MIN 750
+#else
 #define MBHC_BUTTON_PRESS_THRESHOLD_MIN 250
+#endif
 #define GND_MIC_SWAP_THRESHOLD 4
 #define GND_MIC_USBC_SWAP_THRESHOLD 2
 #define WCD_FAKE_REMOVAL_MIN_PERIOD_MS 100
@@ -150,7 +154,11 @@ do {                                                    \
 #define FAKE_REM_RETRY_ATTEMPTS 3
 #define MAX_IMPED 60000
 
+#if defined(CONFIG_MACH_XIAOMI_SAKURA) || defined(CONFIG_MACH_XIAOMI_TIFFANY) || defined(CONFIG_MACH_XIAOMI_VINCE) || defined(CONFIG_MACH_XIAOMI_YSL)
+#define WCD_MBHC_BTN_PRESS_COMPL_TIMEOUT_MS  200
+#else
 #define WCD_MBHC_BTN_PRESS_COMPL_TIMEOUT_MS  50
+#endif
 #define ANC_DETECT_RETRY_CNT 7
 #define WCD_MBHC_SPL_HS_CNT  1
 
