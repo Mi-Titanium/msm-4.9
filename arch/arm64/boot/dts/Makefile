@@ -15,7 +15,6 @@ dts-dirs += nvidia
 ifneq ($(CONFIG_OF_IGNORE_QCOM_DTS),y)
 dts-dirs += qcom
 endif
-dts-dirs += qcom
 dts-dirs += renesas
 dts-dirs += rockchip
 dts-dirs += socionext
