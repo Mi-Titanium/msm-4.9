@@ -390,10 +390,10 @@ LINUXINCLUDE    := \
 LINUXINCLUDE	+= $(filter-out $(LINUXINCLUDE),$(USERINCLUDE))
 
 USERINCLUDE     += \
-                -I$(srctree)/techpack/xiaomi-msm8953/include/uapi \
+                -I$(srctree)/techpack/xiaomi-titanium/include/uapi \
  
 LINUXINCLUDE    += \
-                -I$(srctree)/techpack/xiaomi-msm8953/include
+                -I$(srctree)/techpack/xiaomi-titanium/include
 
 KBUILD_AFLAGS   := -D__ASSEMBLY__
 KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
